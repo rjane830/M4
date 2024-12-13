@@ -1,0 +1,176 @@
+*{ /*muchos elementos tienen un margin y un padding por defecto te los quita*/
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+
+}
+
+/*part comú */
+
+header{
+    display: flex; /*per defecte la flex direction es row: left to right*/
+    /*flex-direction:row; redundant*/
+    align-items: center;
+}
+
+/* *********baixar la imatge??*/
+#fondo{
+    background-image: url(images/imagen-fondo.jpg);
+    background-size: cover;
+    background-repeat: no-repeat; /* Prevents tiling */
+    background-position: center; /* Centers the image */
+    max-height: 75%;
+    /* redundant prq ja tinc el cover width: 100%;*/
+
+}
+
+#logo{
+    padding-left: 20px; /* perq tocant el padding creix/s'encongeix la imatge*/
+    padding-top: 20px;
+    max-height: 85%;
+}
+
+h1{
+    font-family: "Audiowide", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 40px;
+    color: #006a39;
+    margin-left: 25px; /* aquí puc fer servir padd o margin per escorar-ho a la dreta en principi no hi ha cap diff*/
+
+}
+
+/*per fer q les caixetes que es toquin? amb padding? he fet servir padding per fer-les més grans, és correcte?
+ hauria d'ajustar la barra del nav tmb, és correcte? no puc fer que les caixetes encaixin a la barra?*/
+nav a{
+    /*m'he petat el ul i li per evitar el display inline i fer servir height*/
+    text-decoration: none;
+    font-family: "Audiowide", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 17px;
+    color:#006a39;
+    background-color: #EFCE49;
+    padding: 4px 4px 4px 4px;
+    /*position: relative; això què fa?*/ 
+    /*height: 30px; em diu q el display inline evita q hi hagi height*/ 
+}
+
+nav{ 
+    display: flex;
+    background-color:#006a39; /*li dona color a la linea però hi ha un espai entre les dues caixetes d'inici i cicles.*/
+    height: 30px; /*la ppuc encabir a ull movent els pixels*/
+}
+
+.actual{
+    color: #EFCE49;
+    background-color: #006a39;
+}
+
+/*pag 1 */
+
+#d1{
+    max-width: 65%;
+    margin: auto;
+    background-color: #EFCE49;
+    margin-top: 30px;
+    padding: 10px 0px 10px 0px;
+}
+
+h2{
+    font-family: "Audiowide", sans-serif;
+    font-weight: 600;
+    font-style: normal;
+    font-size: 17px;
+    color:#006a39;
+    text-align: center;
+    padding: 10px 0px 10px 0px;
+}
+
+#d2{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content:space-evenly;
+}
+
+#d2 .gran{
+    /* el 1 és prq quan està en gran no canvii la prop 1:1 + el segon és pr
+    qua n es faci més petit es queda a 1:2*/
+    text-align: justify;
+    flex: 1 2;
+    padding: 0px 15px 20px 15px; /*només posar un fa que la img de l'altre caixeta agafa el restant, 50% així q en una serveix!*/
+    
+}
+
+#d2 img{
+    /* *******pujar una mica més la imatge??*/
+    margin: auto;
+    display: block;
+    padding: 0px 15px 20px 15px;
+    flex: 1 2;
+    max-width: 89%;
+}
+
+/* pag 3*/
+
+
+#d1 table{ /* perq no em fa margin top i bottom? i
+    i el margin auto no ho centra per adalt??*/
+    background-color: #006a39;
+    border: 3px solid white;
+    border-collapse: collapse;
+    margin: auto;
+    width: 85%;
+    max-height: 85%;
+} /* ********mirar esto del height, el d3 se'm desquajaringa quan faig inspect*/
+
+th, td{ 
+    border: 1px solid white;
+    text-align: center;
+    color: white;
+    padding: 8px;
+}
+
+/*pag 2 */
+
+.d2sons{
+    background-color: #006a39;
+    width: 30%;
+}
+
+.d2sons h3{
+    color: #EFCE49;
+    text-align: center;
+    font-size: 15px;
+    padding: 10px 0px 0px 0px; /*3r és 0 prq ja poso padd top al paràgraf*/
+}
+
+.petitp{
+    margin: 10px;
+}
+
+.petitp p{
+    text-align: justify;
+    padding-bottom: 10px;
+}
+
+li{
+    list-style-type: square;
+    color: #EFCE49;
+    list-style-position:outside;
+    margin-left: 20px;
+    padding-top: 5px;
+}
+
+/*.audiowide-regular {
+    font-family: "Audiowide", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+  }*/
+
+  @media screen and (max-width: 500px) { /*display flex + flex dir;column*/
+    .d2sons{
+        width: 90%;
+        margin-bottom: 10px;
+    }
+  }

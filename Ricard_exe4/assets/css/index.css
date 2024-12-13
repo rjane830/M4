@@ -1,0 +1,99 @@
+:root{
+	--color1:#1e534a;
+	--header-h:10%;
+	--aside-w:20%;
+}
+
+* {
+	padding: 0px;
+	margin: 0px;
+	box-sizing: border-box;
+}
+
+html,body {
+	height: 100%;
+}
+
+header {
+	color: white;
+	background-color: var(--color1);
+	text-align: left;
+	padding:20px;
+	height: var(--header-h);
+}
+header h1{ font-size: 15px;}
+header h1 b {
+	font-size: 2em;
+}
+aside, main {
+	height: calc(100% - var(--header-h));
+	max-height: calc(100% - var(--header-h));
+}
+aside {
+	/*width auto hace que se ajuste al contenido, non responsive quiero menos aside, pero en respnsive más pongo  */
+	float: left;
+	width: var(--aside-w);
+	background: linear-gradient(to bottom, purple, red);
+}
+aside ul, aside li{width: 100%;}
+aside ul li {
+	display:inline-block;
+}
+aside ul li a {
+	font-size: 18px;
+	color: azure;
+	line-height: 3em;
+	text-align: left;
+	text-decoration: none;
+	display: block;
+	padding:1em;
+}
+aside ul li a:hover {
+	background-color: orangered;
+	text-transform: uppercase;
+}
+main {
+	width: calc(100% - var(--aside-w));
+	overflow-y: scroll;
+	padding: 30px;
+	float: right;
+}
+section {
+	margin: 2em auto;
+}
+section:last-child{
+	margin-bottom:auto;
+}
+p {
+	color: grey;
+	font-size: 17px;
+}
+img {
+	margin: auto;
+	display: block;
+	max-width: 100%;
+	margin: 2em auto;
+}
+section:last-child img{
+	margin-bottom: auto;
+}
+
+@media screen and (max-width: 500px) {
+	header{
+		height: auto;
+	}
+	aside, main{
+		float:none;
+		width: 100%;
+		height: auto;
+		max-height: auto;
+		max-width: auto;
+
+	}
+	aside{
+		height: auto;
+	}
+	
+
+
+}

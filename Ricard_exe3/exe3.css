@@ -1,0 +1,74 @@
+*{ /*qu'est qu'il fait ça?- todos los elementos padd y sizings da problemas, en vez de quitar uno a uno hago una inicializ, quito todo con el 0px, box sizing hace que la width incluye el padding, el*/
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+
+}
+
+header h1{
+    text-align: center;
+    color: blue;
+    font-family: "Sour Gummy", sans-serif;
+    font-optical-sizing: auto;
+    font-weight:bold;
+    font-style: normal;
+    
+    text-shadow: 2px 2px 2px white;
+    padding-top: 16px;
+    padding-bottom: 10px;
+
+    
+    height: 50px;
+}
+
+.background-box{
+    background-image: url(imatges/header2.jpg);
+    background-size: cover;
+    background-repeat: no-repeat; /* Prevents tiling */
+    background-position: center; /* Centers the image */
+    box-shadow: 2px 2px 2px black;
+    height: 90px;
+    width: 100%;
+}
+
+
+body{
+    background-color: rgb(107, 107, 255);
+}
+
+div{
+    background-color: aquamarine;
+    border-radius: 7px;
+    padding: 1em;
+    margin: auto;
+    margin-top: 1em;
+    width: 600px;
+    /* max en relacion al total de la imagen*/
+
+    max-width: 90%;
+
+    /*em para font size o algo proporcional a la letra, para tamaños caja % */
+    font-family: "Sour Gummy", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 200px;
+    font-style: normal;
+    font-variation-settings:"wdth" 100;
+    box-shadow: 3px 3px 3px black;
+}
+
+p{
+    text-align: justify;
+    padding-top: 10px;
+}
+
+.img{
+    /*centrar imagen margin auto + display block*/
+    margin: auto;
+    display: block;
+    border-radius: 7px;
+    max-width: 100%;
+}
+
+.box{
+    border: 1px solid black;
+}
