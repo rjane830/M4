@@ -2,6 +2,7 @@
 	--color1:#1e534a;
 	--header-h:10%;
 	--aside-w:20%;
+	--border-rd:15px;
 }
 
 * {
@@ -13,17 +14,25 @@
 html,body {
 	height: 100%;
 }
+header, aside, main{
+	border-radius: var(--border-rd);
+}
 
 header {
 	color: white;
 	background-color: var(--color1);
-	text-align: left;
 	padding:20px;
 	height: var(--header-h);
+	display: flex;
+	align-items: end;
+	flex-wrap: wrap;
+	flex-direction: row;
+	align-content: center;
 }
-header h1{ font-size: 15px;}
-header h1 b {
-	font-size: 2em;
+header h1{
+	margin: auto 1em;
+	font-size: 3em;
+	line-height: 100%;
 }
 aside, main {
 	height: calc(100% - var(--header-h));
@@ -51,6 +60,9 @@ aside ul li a {
 aside ul li a:hover {
 	background-color: orangered;
 	text-transform: uppercase;
+}
+aside ul li:first-child a {
+	border-radius: var(--border-rd) var(--border-rd) 0 0;
 }
 main {
 	width: calc(100% - var(--aside-w));
@@ -80,20 +92,28 @@ section:last-child img{
 
 @media screen and (max-width: 500px) {
 	header{
-		height: auto;
+		height: fit-content;
+		align-items: center;
+		flex-wrap: wrap;
+		flex-direction: row;
+		align-content: center;
+		justify-content: center;
+	}
+	header h2{
+		text-align: center;
 	}
 	aside, main{
 		float:none;
 		width: 100%;
 		height: auto;
-		max-height: auto;
-		max-width: auto;
-
+		max-height: fit-content;
+		max-width: 100vw;
 	}
-	aside{
-		height: auto;
+	aside ul li a {text-align: center;}
+	aside ul li:last-child a {
+		border-radius: 0 0 var(--border-rd) var(--border-rd);
 	}
-	
-
-
+	main{
+		overflow-y: none;
+	}
 }

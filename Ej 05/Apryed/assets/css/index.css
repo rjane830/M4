@@ -1,13 +1,15 @@
-:root{
-	--color1:#000000FF;
+main > section > p {
+	float:left;
+	width: calc(50% - 10px);
+	margin-right: 10px;
+	text-align: justify;
 }
 
-* {
-	padding: 0px;
-	margin: 0px;
-	box-sizing: border-box;
+main > section > img {
+	float:right;
+	width: calc(50% - 10px);
+	margin-left: 10px;
 }
-
-html {
-	background-color: var(--color1);
+main > section:after{
+	clear:both;
 }

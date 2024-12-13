@@ -1,0 +1,86 @@
+:root{
+	--color1:#006a39;
+	--color2:#EFCE49;
+}
+
+* {
+	padding: 0px;
+	margin: 0px;
+	box-sizing: border-box;
+	font-family: "Audiowide", sans-serif;
+	font-style: normal;
+}
+
+p,li,p a, h2, td, th {
+	font-family: initial;
+	font-style: initial;
+}
+
+header {
+	background-image: url("../img/imagen-fondo.jpg");
+	display: flex;
+	flex-direction: column;
+	justify-content: space-evenly;
+}
+
+header > div {
+	display: flex;
+	flex-direction: row;
+	align-items: flex-end;
+	padding: 1.5em;
+}
+
+header > div > img {
+	width: 75px;
+	margin-right:25px;
+}
+
+header > div > h1 {
+	color:var(--color1);
+	text-shadow: 2px 2px 4px white;
+}
+
+header > nav{
+	background-color: var(--color1);
+	color: var(--color2);
+}
+
+header > nav > ul {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+	overflow: hidden;
+}
+header > nav > ul:after{
+	clear:both;
+}
+header > nav > ul > li {
+	float: left;
+}
+header > nav > ul > li > a {
+	display: block;
+	color: var(--color2);
+	text-align: center;
+	padding: 10px 15px;
+	text-decoration: none;
+}
+header > nav > ul > li > a:hover, .active {
+	background-color: var(--color2);
+	color:var(--color1);
+}
+main {
+	padding: 2em;
+}
+main > section {
+	background-color: var(--color2);
+	width: 75%;
+	padding: 1.5em;
+	margin:auto;
+	overflow: auto;
+}
+
+main > section > h1 {
+	text-align: center;
+	color:var(--color1);
+	margin-bottom:15px;
+}

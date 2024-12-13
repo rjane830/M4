@@ -1,13 +1,66 @@
-:root{
-	--color1:#000000FF;
+:root {
+	--header-h: 15vh;
+	--color1: #000000ff;
 }
-
 * {
 	padding: 0px;
 	margin: 0px;
 	box-sizing: border-box;
+	font-family: "Sour Gummy", sans-serif;
+	font-optical-sizing: auto;
+	font-weight: bold;
+	font-style: normal;
 }
-
 html {
 	background-color: var(--color1);
+}
+header {
+	background-image: url("../img/header2.jpg");
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center;
+	height: var(--header-h);
+	display: flex;
+	justify-content: space-evenly;
+	align-items: center;
+	box-shadow: 0px 2px 10px black;
+	border-bottom: 1px solid black;
+	position: relative;
+}
+header h1 {
+	text-align: center;
+	color: blue;
+	font-family: "Sour Gummy", sans-serif;
+	font-optical-sizing: auto;
+	font-weight: bold;
+	font-style: normal;
+	text-shadow: 2px 2px 2px white;
+}
+main {
+	height: calc(100vh - var(--header-h));
+	background-color: skyblue;
+	padding: 2em;
+}
+div {
+	background-color: aquamarine;
+	border-radius: 7px;
+	padding: 1em;
+	margin: auto;
+	width: 600px;
+	max-width: 90%;
+	font-family: "Sour Gummy", sans-serif;
+	font-optical-sizing: auto;
+	font-weight: 200px;
+	font-style: normal;
+	font-variation-settings: "wdth" 100;
+	box-shadow: 3px 3px 3px black;
+}
+div img {
+	display: block;
+	margin: auto;
+	border-radius: 15px;
+}
+p {
+	text-align: justify;
+	padding: 20px 5px 0px 5px;
 }
