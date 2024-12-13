@@ -1,0 +1,37 @@
+@layer responsive{
+	/* Moviles */
+	@media (max-width:320px) or (max-width:480px) or (max-width:576px) or ((min-width:577px) and (max-width:768px)) or ((min-width:769px) and (max-width:1024px)) or ((min-width:1025px) and (max-width:1200px)){
+		nav{
+			flex-direction:column;
+		}
+		nav a{
+			text-align:center;
+		}
+		main{
+			min-height: 90vh;
+		}
+		main > section:not(#esports){
+			width:85vw;
+		}
+		#esports{
+			display:flex;
+			flex-direction:column;
+			align-items:stretch;
+			flex-wrap:nowrap;
+		}
+		#esports :not(:last-child){
+			margin-bottom:15px;
+		}
+	}
+	/* Tablets */
+	@media (min-width:577px) and (max-width:768px){
+		/* iPad Mini, small tablets */
+	}
+	@media (min-width:769px) and (max-width:1024px){
+		/* iPad, Galaxy Tab */
+	}
+	/* Small laptops and tablets (landscape) */
+	@media (min-width:1025px) and (max-width:1200px){
+		/* 13-inch laptops */
+	}
+}

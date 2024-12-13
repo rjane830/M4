@@ -1,0 +1,171 @@
+* {
+	/*muchos elementos tienen un margin y un padding por defecto te los quita*/
+	padding: 0px;
+	margin: 0px;
+	box-sizing: border-box;
+
+}
+
+
+header {
+	background-image: url(images/imagen-fondo.jpg);
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center;
+	max-height: 75%;
+	display: flex;
+	align-items: center;
+}
+
+#logo {
+	padding-left: 20px;
+	/* perq tocant el padding creix/s'encongeix la imatge*/
+	padding-top: 20px;
+	width: 100px;
+}
+
+h1 {
+	font-family: "Tektur", sans-serif;
+	font-optical-sizing: auto;
+	font-weight: bold;
+	font-style: normal;
+	font-variation-settings:
+		"wdth" 100;
+	color: #c35b26;
+	text-shadow: 1px 1px 1px white;
+}
+
+nav {
+	display: flex;
+	background-color: #c35b26;
+	/*li dona color a la linea però hi ha un espai entre les dues caixetes d'inici i cicles.*/
+	height: 30px;
+	/*la ppuc encabir a ull movent els pixels*/
+}
+
+nav a {
+	text-decoration: none;
+	font-family: "Tektur", sans-serif;
+	font-optical-sizing: auto;
+	font-weight: 15px;
+	font-style: normal;
+	font-variation-settings: "wdth" 100;
+	color: #bba795;
+	background-color: #c35b26;
+	padding: 4px 4px 4px 4px;
+	/*position: relative; això què fa?*/
+	/*height: 30px; em diu q el display inline evita q hi hagi height*/
+}
+
+nav a:hover {
+	background-color: #4c6612;
+}
+
+.actual {
+	color: #c35b26;
+	background-color: #bba795;
+}
+
+h2 {
+	font-family: "Tektur", sans-serif;
+	font-optical-sizing: auto;
+	font-weight: bold;
+	font-style: normal;
+	font-variation-settings:
+		"wdth" 100;
+	color: #c35b26;
+	text-align: center;
+}
+
+#d1 {
+	height: 70%;
+}
+
+#h2 {
+	width: 100%;
+}
+
+.d2 {
+	background-color: #bba795;
+	width: 50%;
+	margin: auto;
+	margin-top: 10px;
+	margin-bottom: 10px;
+	height: 25%;
+}
+
+#d3 {
+	background-color: #bba795;
+	width: 100%;
+	margin: auto;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-around;
+	margin-top: 10px;
+	padding-bottom: 10px;
+	height: 25%;
+}
+
+
+#d3 img {
+	width: 20%;
+	border-radius: 5px;
+	box-shadow: 2px 2px 2px white;
+}
+
+#d22 {
+	display: flex;
+	justify-content: space-around;
+}
+
+h3 {
+	font-family: "Tektur", sans-serif;
+	font-optical-sizing: auto;
+	font-weight: bold;
+	font-style: normal;
+	font-variation-settings:
+		"wdth" 100;
+	color: #c35b26;
+	text-align: center;
+}
+
+#d4 {
+	width: 50%;
+	background-color: #bba795;
+	margin: auto;
+	margin-top: 25px;
+	margin-bottom: 30px;
+}
+
+#d4 table {
+	background-color: #c35b26;
+	margin: auto;
+	padding: 10px;
+
+}
+
+td {
+	width: 50%;
+	color: azure;
+	margin: auto;
+}
+
+table img {
+	width: 75%;
+}
+
+footer {
+	background-color: #c35b26
+}
+
+footer a {
+
+	color: azure;
+	text-align: center;
+}
+
+@media screen and (max-width: 500px) {
+	#d1 {
+		flex-direction: column;
+	}
+}

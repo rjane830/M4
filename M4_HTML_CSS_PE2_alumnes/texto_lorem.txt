@@ -1,0 +1,41 @@
+Qui som
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec placerat tortor feugiat, elementum felis at, bibendum nunc. Pellentesque molestie lobortis vestibulum. Sed non leo eu massa scelerisque aliquet. Quisque iaculis libero nec tincidunt finibus. Praesent pulvinar in ipsum fringilla gravida. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut ullamcorper eleifend arcu aliquet condimentum. Morbi leo mauris, dapibus at venenatis sed, tincidunt quis nibh. Quisque ultrices massa erat, eu ultrices sapien egestas ac. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec placerat tortor feugiat, elementum felis at, bibendum nunc. Pellentesque molestie lobortis vestibulum. Sed non leo eu massa scelerisque aliquet. Quisque iaculis libero nec tincidunt finibus. Praesent pulvinar in ipsum fringilla gravida. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut ullamcorper eleifend arcu aliquet condimentum. Morbi leo mauris, dapibus at venenatis sed, tincidunt quis nibh. Quisque ultrices massa erat, eu ultrices sapien egestas ac.
+
+Formulari
+
+Participa al rànking!
+	Email
+	Esport favorit
+		Futbòl
+		Bàsquet
+		Tenis
+		Altres
+	Si el teu esport favorit no hi era al desplegable, escriu-lo aquí:
+	Indica la opció que fas respecte al teu esport favorit:
+		El segueixo com espectador
+		El practico
+		Ambdues coses
+	Comentaris
+		Escriu aquí comentaris adicionals a la teva votació...
+	He llegit i accepto les condicions de tractament de dades personals.
+	Enviar
+
+Footer
+	Web feta per l'Institut Marianao
+	
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Tektur:wght@400..900&display=swap" rel="stylesheet">
+
+// <uniquifier>: Use a unique and descriptive class name
+// <weight>: Use a value from 400 to 900
+
+.tektur-<uniquifier> {
+  font-family: "Tektur", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: <weight>;
+  font-style: normal;
+  font-variation-settings:
+    "wdth" 100;
+}

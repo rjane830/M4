@@ -1,0 +1,27 @@
+@layer responsive{
+	@media (max-width:320px) or (max-width:480px) or (max-width:576px) or ((min-width:577px) and (max-width:768px)) or ((min-width:769px) and (max-width:1024px)) or ((min-width:1025px) and (max-width:1200px)){
+		nav{
+			flex-direction:column;
+		}
+		nav a{
+			text-align:center;
+		}
+		main{
+			min-height: 78vh;
+		}
+		main section{
+			width:85vw;
+		}
+	}
+	/* Tablets */
+	@media (min-width:577px) and (max-width:768px){
+		/* iPad Mini, small tablets */
+	}
+	@media (min-width:769px) and (max-width:1024px){
+		/* iPad, Galaxy Tab */
+	}
+	/* Small laptops and tablets (landscape) */
+	@media (min-width:1025px) and (max-width:1200px){
+		/* 13-inch laptops */
+	}
+}

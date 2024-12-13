@@ -1,0 +1,70 @@
+@layer ranking{
+	main{
+		display: block;
+	}
+	main section{
+		width:50vw;
+		background-color:var(--color2);
+		margin:30px auto;
+		display:block;
+		border:1px solid transparent;
+		max-height: max-content;
+	}
+	table{
+		background-color:var(--color1);
+		margin:0 10px 2.5em 10px;
+		padding:10px;
+		display:table;
+		border-collapse:collapse;
+		text-indent:initial;
+		border-spacing:2px;
+		text-align:center;
+		color:var(--color5);
+		border:3px solid var(--color5)
+	}
+	thead{
+		display:table-header-group;
+		vertical-align:middle;
+		text-align:inherit;
+	}
+	tr{
+		display:table-row;
+		vertical-align:inherit;
+		text-align:inherit;
+	}
+	th{
+		display:table-cell;
+		vertical-align:inherit;
+		font-weight:bold;
+		text-align:inherit;
+		line-height:50px;
+	}
+	tbody{
+		display:table-row-group;
+		vertical-align:middle;
+		text-align:inherit;
+	}
+	td{
+		display:table-cell;
+		vertical-align:inherit;
+		width:50%;
+		margin:auto;
+		text-align:center;
+		padding:10px;
+		font-size:0.75em;
+	}
+	tbody tr:nth-child(odd) td:first-child{
+		font-weight:bold;
+		text-transform:uppercase;
+		font-size:1em;
+	}
+	td img{
+		overflow:clip;
+		width:100%; 
+		margin:auto;
+		display:block;
+	}
+	th, td{
+		border:1px solid var(--color4);
+	}
+}

@@ -1,0 +1,8 @@
+/*
+	TODO: Use at-rules ( https://developer.mozilla.org/en-US/docs/Web/CSS/At-rule#index )
+		* @supports
+*/
+@charset "utf-8";
+@layer reset, theme, override;
+@import "../reset.css" layer(reset);
+@import "../themes/default/commons.css" layer(theme);
