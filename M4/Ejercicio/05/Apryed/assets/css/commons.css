@@ -18,6 +18,8 @@ p,li,p a, h2, td, th {
 
 header {
 	background-image: url("../img/imagen-fondo.jpg");
+	background-size: 100% 100%;
+	background-repeat: no-repeat;
 	display: flex;
 	flex-direction: column;
 	justify-content: space-evenly;

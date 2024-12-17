@@ -1,0 +1,160 @@
+:root {
+	--color1: #00000000;
+}
+
+* {
+	padding: 0px;
+	margin: 0px;
+	box-sizing: border-box;
+}
+
+html {
+	background-color: var(--color1);
+}
+
+a {
+	width: 100%;
+	padding: 12px;
+	line-height: 2em;
+}
+
+/* Estructura del menú */
+header > nav > ul {
+	list-style-type: none;
+	margin-block-start: 0px;
+	margin-block-end: 0px;
+	margin-inline-start: 0px;
+	margin-inline-end: 0px;
+	padding-inline-start: 0px;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	align-content: center;
+	justify-content: flex-start;
+	align-items: center;
+	gap: 15px;
+	position: relative;
+}
+
+
+header > nav > ul > li ul {
+	list-style-type: none;
+	margin-block-start: 0px;
+	margin-block-end: 0px;
+	margin-inline-start: 0px;
+	margin-inline-end: 0px;
+	padding-inline-start: 0px;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	align-content: center;
+	justify-content: flex-start;
+	align-items: center;
+	position: relative;
+}
+
+header > nav,
+header > nav ul {
+	width: 100%;
+}
+
+header > nav > ul > li {
+	position: relative;
+	padding: 10px 15px;
+	text-align: center;
+	background-color: #f0f0f0;
+	cursor: pointer;
+	min-width: 50px; /* Asegurar tamaños consistentes */
+}
+
+header > nav > ul > li > ul,
+header > nav > ul > li > ul > li > ul {
+	display: none; /* Ocultos por defecto */
+	position: absolute;
+	top: 100%;
+	left: 0;
+	z-index: 10;
+	min-width: 150px;
+}
+
+header > nav > ul > li > ul > li {
+	position: relative;
+	padding: 10px;
+	text-align: left;
+	background-color: #f9f9f9;
+	cursor: pointer;
+}
+
+header > nav > ul > li > ul > li > ul {
+	left: 100%;
+	top: 0;
+}
+
+header > nav > ul > li.open > ul,
+header > nav > ul > li > ul > li.open > ul {
+	display: flex; /* Mostrar submenús al tener la clase .open */
+	flex-direction: column;
+	align-content: flex-start;
+	align-items: stretch;
+}
+
+header > nav > ul > li > ul > li > ul {
+	width: max-content; /* Asegurar que se ajuste al contenido */
+}
+
+header > nav > ul > li > ul > li > ul > li {
+	text-align: left;
+	background-color: #f9f9f9;
+}
+
+/* Alineación condicional de submenús */
+header > nav > ul > li > ul > li > ul {
+	right: auto;
+	left: 100%; /* Por defecto, submenús secundarios se alinean a la derecha */
+}
+
+header > nav > ul > li > ul > li > ul {
+	/* En caso de no haber espacio a la derecha */
+	right: auto;
+	left: 100%;
+}
+
+@media (max-width: 600px) {
+	header > nav > ul > li > ul,
+	header > nav > ul > li > ul > li > ul {
+		left: auto;
+		right: 0; /* Alineación inversa en pantallas pequeñas si no hay espacio */
+	}
+}
+
+/* Estilo visual */
+header > nav > ul > li,
+header > nav > ul > li > ul > li,
+header > nav > ul > li > ul > li > ul > li {
+	transition: background-color 0.3s ease;
+}
+
+header > nav > ul > li:hover,
+header > nav > ul > li > ul > li:hover,
+header > nav > ul > li > ul > li > ul > li:hover {
+	background-color: #e0e0e0;
+}
+
+header > nav > ul > li.open,
+header > nav > ul > li > ul > li.open,
+header > nav > ul > li > ul > li > ul > li.open {
+	background-color: #dcdcdc;
+}
+
+/* Asegurar tamaños iguales para elementos principales */
+header > nav > ul > li {
+	flex: 1 1 auto; /* Distribuir espacio igual entre "M4" y "M3" */
+	text-align: center;
+}
+main,
+main > iframe {
+	width: 100%;
+}
+iframe {
+	height: 100%;
+}
