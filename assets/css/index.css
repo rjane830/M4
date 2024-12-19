@@ -1,7 +1,7 @@
-html {
-	background-color: var(--color1);
+:root{
+	--MainMenu:3;
+	--MainMenuGap:15px;
 }
-
 a {
 	width: 100%;
 	padding: 12px;
@@ -21,8 +21,9 @@ header > nav > ul {
 	align-content: center;
 	justify-content: flex-start;
 	align-items: center;
-	gap: 15px;
+	column-gap: var(--MainMenuGap);
 	position: relative;
+	align-items: stretch;
 }
 
 header > nav > ul > li ul {
@@ -49,11 +50,17 @@ header > nav ul {
 header > nav > ul > li {
 	position: relative;
 	padding: 10px 15px;
-	text-align: center;
 	background-color: #f0f0f0;
 	cursor: pointer;
-	min-width: calc((100% - 15px)/2);
-	
+	display: flex; /* Asegura que el contenido esté centrado */
+	justify-content: center; /* Centra horizontalmente */
+	align-items: center; /* Centra verticalmente */
+	text-align: center;
+}
+
+header > nav > ul > li > span {
+	display: block;
+	width: 100%;
 }
 
 header > nav > ul > li > ul,
@@ -88,7 +95,8 @@ header > nav > ul > li > ul > li.open > ul {
 }
 
 header > nav > ul > li > ul > li > ul {
-	width: max-content;}
+	width: max-content;
+}
 
 header > nav > ul > li > ul > li > ul > li {
 	text-align: left;
@@ -97,7 +105,8 @@ header > nav > ul > li > ul > li > ul > li {
 
 header > nav > ul > li > ul > li > ul {
 	right: auto;
-	left: 100%;}
+	left: 100%;
+}
 
 header > nav > ul > li > ul > li > ul {
 	right: auto;
@@ -123,13 +132,22 @@ header > nav > ul > li > ul > li > ul > li.open {
 }
 
 header > nav > ul > li {
-	flex: 1 1 auto;
-	text-align: center;
+	flex: 1 1 calc(
+		(
+			100% - (
+				var(--MainMenuGap) * (
+					var(--MainMenu) - 1
+				)
+			)
+		) / var(--MainMenu)
+	);
 }
+
 main,
 main > iframe {
 	width: 100%;
 }
+
 iframe {
 	height: 100%;
 }
