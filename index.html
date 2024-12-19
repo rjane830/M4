@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="ca-ES">
-
 	<head>
 		<meta charset="utf-8" />
 		<meta name="description" content="" />
@@ -13,7 +12,6 @@
 		<link rel="stylesheet" href="assets/css/index.css" />
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 	</head>
-
 	<body>
 		<header>
 			<h1>IES Marianao - Ricard Collection</h1>
@@ -25,29 +23,17 @@
 							<li>
 								Ejercicios
 								<ul>
-									<li>
-										<a href="M4/Ejercicio/01/Ricard/index.html">01</a>
-									</li>
-									<li>
-										<a href="M4/Ejercicio/02/Ricard/index.html">02</a>
-									</li>
-									<li>
-										<a href="M4/Ejercicio/03/Ricard/index.html">03</a>
-									</li>
-									<li>
-										<a href="M4/Ejercicio/04/Ricard/index.html">04</a>
-									</li>
-									<li>
-										<a href="M4/Ejercicio/05/Ricard/index.html">05</a>
-									</li>
+									<li><a href="M4/Ejercicio/01/Ricard/index.html">01</a></li>
+									<li><a href="M4/Ejercicio/02/Ricard/index.html">02</a></li>
+									<li><a href="M4/Ejercicio/03/Ricard/index.html">03</a></li>
+									<li><a href="M4/Ejercicio/04/Ricard/index.html">04</a></li>
+									<li><a href="M4/Ejercicio/05/Ricard/index.html">05</a></li>
 								</ul>
 							</li>
 							<li>
 								Examenes
 								<ul>
-									<li>
-										<a href="M4/Examen/01/Ricard/ricard1.html">01</a>
-									</li>
+									<li><a href="M4/Examen/01/Ricard/ricard1.html">01</a></li>
 								</ul>
 							</li>
 						</ul>
@@ -58,29 +44,17 @@
 							<li>
 								Ejercicios
 								<ul>
-									<li>
-										<a href="M4/Ejercicio/01/Apryed/index.html">01</a>
-									</li>
-									<li>
-										<a href="M4/Ejercicio/02/Apryed/index.html">02</a>
-									</li>
-									<li>
-										<a href="M4/Ejercicio/03/Apryed/index.html">03</a>
-									</li>
-									<li>
-										<a href="M4/Ejercicio/04/Apryed/index.html">04</a>
-									</li>
-									<li>
-										<a href="M4/Ejercicio/05/Apryed/index.html">05</a>
-									</li>
+									<li><a href="M4/Ejercicio/01/Apryed/index.html">01</a></li>
+									<li><a href="M4/Ejercicio/02/Apryed/index.html">02</a></li>
+									<li><a href="M4/Ejercicio/03/Apryed/index.html">03</a></li>
+									<li><a href="M4/Ejercicio/04/Apryed/index.html">04</a></li>
+									<li><a href="M4/Ejercicio/05/Apryed/index.html">05</a></li>
 								</ul>
 							</li>
 							<li>
 								Examenes
 								<ul>
-									<li>
-										<a href="M4/Examen/01/Apryed/index.html">01</a>
-									</li>
+									<li><a href="M4/Examen/01/Apryed/index.html">01</a></li>
 								</ul>
 							</li>
 						</ul>
@@ -89,49 +63,35 @@
 			</nav>
 			<script>
 				$(document).ready(function () {
-					// Manejar clic en elementos del menú principal
 					$("header > nav > ul > li").on("click", function (e) {
 						e.stopPropagation();
-						// Verificar si está abierto
 						const isOpen = $(this).hasClass("open");
-						// Cerrar todos los demás submenús
 						$("header > nav > ul > li").removeClass("open").children("ul").slideUp(300);
-						// Abrir el submenú si no estaba abierto
 						if (!isOpen) {
 							$(this).addClass("open").children("ul").stop().slideDown(300);
 						}
 					});
-
-					// Manejar clic en submenús secundarios
 					$("header > nav > ul > li > ul > li").on("click", function (e) {
 						e.stopPropagation();
-						// Verificar si está abierto
 						const isOpen = $(this).hasClass("open");
-						// Cerrar todos los demás submenús secundarios
 						$(this).siblings().removeClass("open").children("ul").slideUp(300);
-						// Abrir el submenú si no estaba abierto
 						if (!isOpen) {
 							$(this).addClass("open").children("ul").stop().slideDown(300);
 						}
 					});
-
-					// Manejar clic en enlaces para cargar en el iframe
 					$("header > nav a").on("click", function (e) {
-						e.preventDefault(); // Evitar la navegación estándar
+						e.preventDefault();
 						e.stopPropagation();
-						const url = $(this).attr("href"); // Obtener el enlace
-						$("main iframe").attr("src", url); // Cargar en el iframe
-						// Cerrar el menú después de seleccionar un enlace
-						$("header > nav > ul > li").removeClass("open").children("ul").slideUp(300);
+						const url = $(this).attr("href");
+						$("main iframe").attr("src", url);
+						$(this).closest("ul").slideUp(300).parent().removeClass("open");
 					});
-
-					// Cerrar todo al hacer clic fuera del menú
-					$(document).on("click", function () {
-						$("header > nav > ul > li").removeClass("open").children("ul").slideUp(300);
+					$(document).on("click", function (e) {
+						if (!$(e.target).closest("header > nav").length) {
+							$("header > nav > ul > li").removeClass("open").children("ul").slideUp(300);
+						}
 					});
-				});
-				$(document).ready(function(){
-					$("main").css("height", (window.innerHeight - (parseInt( $("header").css("height").replace(/px/,"")) + parseInt($("footer").css("height").replace(/px/,""))))+"px" );
+					$("main").css("height", (window.innerHeight - ($("header").outerHeight() + $("footer").outerHeight())) + "px");
 				});
 			</script>
 		</header>
@@ -142,5 +102,4 @@
 			<p>Index creado por <b id="creator">Apryed</b> para <b>Ricard</b>. - 17/12/2024</p>
 		</footer>
 	</body>
-
 </html>

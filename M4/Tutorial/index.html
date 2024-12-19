@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="es-ES">
+	<head>
+		<meta charset="utf-8">
+		<meta name="description" content="Tutorial HTML para Ricard - CFGS - IES Marianao">
+		<meta name="keywords" content="Tutorial, HTML, M4, IES Marianao, Marianao, Apryed">
+		<meta name="author" content="Javier Alfredo 'Apryed' Sivori">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<base href="./" target="_self">
+		<link rel="icon" href="assets/img/logo.png" />
+		<link rel="apple-touch-icon" href="assets/img/logo.png" />
+		<meta name="theme-color" content="#000000" />
+		<link rel="manifest" href="assets/manifest.json" />
+		<title>Apryed's HTML Tutorial</title>
+		<link rel="stylesheet" href="assets/css/commons.css" />
+		<link rel="stylesheet" href="assets/css/index.css">
+	</head>
+	<body>
+		<nav>
+			<ul>
+				<li><a href="index.html#h_basic">HTML Básico</a></li>
+				<li><a href="index.html#c_basic">CSS Básico</a></li>
+				<li><a href="index.html#"></a></li>
+				<li><a href="index.html#"></a></li>
+				<li><a href="index.html#"></a></li>
+			</ul>
+		</nav>
+		<main>
+			<section id="h_basic">
+				<h1><abbr title="HyperText Markup Language ( Lenguaje de Marcas de Hipertexto )">HTML</abbr></h1>
+				<ol>
+					<li>
+						<details>
+							<summary>¿Qué es HTML?</summary>
+							<p>HTML es la abreviación de HyperText Markup Language ( Lenguaje de Marcas de Hipertexto ). Es un lenguaje que define el significado y la estructura del contenido web.<br>"Hipertexto" hace referencia a los enlaces que conectan páginas web entre sí, ya sea dentro de un único sitio web o entre sitios web.<br>"Marcas" para etiquetar texto, imágenes y otro contenido para mostrarlo en un navegador Web.</p>
+						</details>
+					</li>
+					<li>
+						<details>
+							<summary>¿Qué es una etiqueta y qué tipos hay?</summary>
+							<p>Son instrucciones para definir un elemento HTML específico e indican cómo mostrarlo en la página.<br>Es todo elemento encerrado entre &lt; y &gt;. Pueden contener atributos/propiedes.<br>Hay dos tipos de etiquetas:</p>
+							<ol>
+								<li>
+									<details>
+										<summary>Cerradas</summary>
+										<p>Toda aquella etiqueta que necesita de otra etiqueta igual, iniciada por una /, al final del contenido que querramos poner dentro para cerrarla.</p>
+										<code>
+											&lt;ETIQUETA ATTR1="VAL1" ATTR2="VAL2" ATTR&gt;CONTENIDO&lt;/ETIQUETA&gt;
+										</code>
+										<p>Etiquetas del grupoo: html, </p>
+									</details>
+								</li>
+								<li>
+									<details>
+										<summary>Abiertas</summary>
+										<p>Toda aquella etiqueta que <b>no</b> necesita de otra etiqueta igual al final. Suele ser utilizada en etiquetas que el contenido venga incrustado dentro.</p>
+										<code>
+											&lt;ETIQUETA ATTR1="VAL1" ATTR2="VAL2" ATTR&gt;
+										</code>
+										<p>Etiquetas del grupoo:</p>
+									</details>
+								</li>
+							</ol>
+						</details>
+					</li>
+					<li>
+						<details>
+							<summary>¿Por qué veo bien la web, si hay etiquetas cerradas sin cerrar?</summary>
+							<p>El navegador autocompletará cualquier etiqueta no cerrada al final del documento pudiendo, o no, mostrar la web de forma incorrecta. Toda etiqueta cerrable, ha de cerrarse. Sin excepción.</p>
+						</details>
+					</li>
+					<li>
+						<details>
+							<summary>Partes de un HTML</summary>
+							<p>HTML tiene 3 partes.</p>
+							<ol>
+								<li><b>DOCTYPE</b> : La definición del tipo de documento.<br>Aquí se le dice al programa que vaya a abrir nuestro archivo en que formanto hemos escrito nuestro código.<br>
+									<code>&lt;!DOCTYPE html&gt;<br>
+										&lt;html&gt;<br>
+										...<br>
+										&lt;/html&gt;
+									</code>
+								</li>
+								<li><b>head</b> : La información de cabecera de la pagina.<br>Aquí irán todos los parametros de la pagina. Códificación, Descripción de la web, Creador, Estilo que tendran los elementos de la web, Título, etc.<br>
+									<code>&lt;head&gt;<br>
+										...<br>
+										&lt;/head&gt;
+									</code>
+								</li>
+								<li><b>body</b> : El cuerpo de la web.<br>Aquí irán todos los elementos visibles al usuario y alguna que otro script.<br>
+									<code>&lt;body&gt;<br>
+										...<br>
+										&lt;/body&gt;
+									</code>
+								</li>
+							</ol>
+							<code>&lt;!DOCTYPE html&gt;<br>&lt;html&gt;<br>&lt;head&gt;<br>...<br>&lt;/head&gt;<br>&lt;body&gt;<br>...<br>&lt;/body&gt;<br>&lt;/html&gt;</code>
+						</details>
+					</li>
+					<li>
+						<details>
+							<summary>¿Qué es es un atributo y qué tipos hay?</summary>
+							<p>Un atributo es todo aquello que añade información a una etiqueta, el cual puede tener valor o no.<br><strong>Siempre</strong> va junto a la etiqueta de inicio, previo al contenido.</p>
+							<p>Atributos: </p>
+						</details>
+					</li>
+				</ol>
+				
+			</section>
+		</main>
+	</body>
+</html>

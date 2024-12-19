@@ -1,0 +1,61 @@
+/* CSS Obliterator */
+/* *{all:initial;color:inherit;font-family:inherit;box-sizing:border-box;}script{display:none;}title{display:none;}
+
+/* Commons */
+*{margin:0;box-sizing:border-box;}
+:root {
+	--color1: #00000000;
+}
+
+body {
+	display: flex;
+	flex-direction: column;
+	align-content: stretch;
+	align-items: stretch;
+	padding: 2.54cm;
+	min-height: 100vh;
+}
+
+nav {
+	display: block;
+	width: 100%;
+}
+
+main {
+	display: block;
+}
+
+h1 {
+	display: block;
+	font-size: 1.5em;
+	font-weight: bold;
+}
+
+abbr[title] {
+	text-decoration: underline dotted;
+}
+
+ol {
+	display: inline-block;
+	margin-block-start: 0em;
+	margin-block-end: 0em;
+	margin-inline-start: 0px;
+	margin-inline-end: 0px;
+	padding-inline-start: 0px;
+}
+main > section > ol{
+	list-style-type: none;
+}
+
+main > section > ol > li ol{
+	list-style-type: decimal;
+	padding-inline-start: 20px;
+}
+
+li {
+	display: list-item;
+}
+
+details {
+	display: block;
+}
