@@ -52,7 +52,8 @@ header > nav > ul > li {
 	text-align: center;
 	background-color: #f0f0f0;
 	cursor: pointer;
-	min-width: 50px;
+	min-width: calc((100% - 15px)/2);
+	
 }
 
 header > nav > ul > li > ul,
